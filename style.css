@@ -1,0 +1,349 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display-swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', sans-serif;
+
+ }
+
+ body {
+     height: 100vh;
+     width: 100vw;
+     background-color: #e3e3e3;
+     overflow: hidden;
+ }
+
+ .header {
+     height: 1vh;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     padding: 2%;
+     z-index: 1;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background: transparent;
+ }
+
+ .logo {
+     height: 190px;
+     width: 210px;
+     /* filter: brightness(1); */
+     filter:contrast(35),brightness(5),;
+     animation: log 1s ease forwards;
+
+ }
+
+ @keyframes log {
+     0% {
+         transform: translateX(-100px);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ .navbar a {
+     font-size: 18px;
+     color: #050505;
+     text-decoration: none;
+     font-weight: 500;
+     margin: 0 20px;
+     transition: .3s;
+     opacity: 0;
+     animation: naav 1s ease forwards;
+     animation-delay: calc(.2s * var(--i));
+
+
+
+ }
+
+ @keyframes naav {
+     0% {
+         transform: translateY(100px);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .navbar a:hover,
+ .navbar a.active {
+     color: #1743e3;
+ }
+
+ .social {
+     display: flex;
+     justify-content: space-between;
+     width: 150px;
+     height: 40px;
+     margin-left: 15%;
+
+ }
+
+ .social a {
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 40px;
+     background: transparent;
+     border: 3px solid transparent;
+     text-decoration: none;
+     transform: rotate(45deg);
+     transition: .10s;
+     opacity: 0;
+     animation: soc 1s ease forwards;
+     animation-delay: calc(.2s * var(--i));
+
+
+
+ }
+
+ @keyframes soc {
+     0% {
+         transform: translateX(100px) rotate(45deg);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateX(0)rotate(45deg);
+         opacity: 1;
+     }
+ }
+
+ .social a:hover {
+     border: 3px solid #f7f7f9;
+ }
+
+ .social a i {
+     font-size: 24px;
+     color: #fff;
+     font-weight: bold;
+     transform: rotate(-45deg);
+     align-items: center;
+     margin: 0 45px;
+ }
+
+ .home {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     padding: 50px 2% 0;
+     justify-content: space-around;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .home-con {
+     background-color: transparent;
+     max-width: 430px;
+
+ }
+
+ .home-con h1 {
+     font-size: 50px;
+     line-height: 1.2;
+     opacity: 0;
+     animation: con 1s ease forwards;
+     animation-delay: 1.3s;
+ }
+
+ @keyframes con {
+     0% {
+         transform: translateY(-100px);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .home-con h3 {
+     font-size: 50px;
+     color: #1743e3;
+     opacity: 0;
+     animation: on 1s ease forwards;
+     animation-delay: 1.3s;
+ }
+
+ @keyframes on {
+     0% {
+         transform: translateX(-100px);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ .home-con p {
+     font-size: 14px;
+     margin: 15px 0 30px;
+     opacity: 0;
+     animation: p 1s ease forwards;
+     animation-delay: 1.3s;
+
+ }
+
+ @keyframes p {
+     0% {
+         transform: translateX(100px);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ .btn {
+     display: inline-block;
+     text-decoration: none;
+     background-color: #1743e3;
+     color: aliceblue;
+     font-weight: 600;
+     font-size: 16px;
+     padding: 10px 28px;
+     border: 2px solid transparent;
+     border-radius: 6px;
+     letter-spacing: 1px;
+     opacity: 0;
+     animation: bt 1s ease forwards;
+     animation-delay: 1.5s;
+
+ }
+
+ @keyframes bt {
+     0% {
+         transform: translateY(100px);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .btn:hover {
+     background-color: transparent;
+     border: 2px solid #1743e3;
+     color: #1743e3;
+ }
+
+ .home-img {
+     height: 450px;
+     width: 450px;
+     position: relative;
+     transform: rotate(45deg);
+     background-color: transparent;
+ }
+
+ .home-img .rohmbus {
+     position: absolute;
+     border: 24px solid #1743e3;
+     width: 100%;
+     height: 100%;
+     bottom: 3px;
+     box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.405);
+     background-color: #e3e3e3;
+     top: -2px;
+     opacity: 0;
+     animation: zoomout 1s ease forwards;
+     animation-delay: 1.5s;
+
+ }
+
+ @keyframes zoomout {
+     0% {
+         transform: scale(1.1);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
+
+ .home-img .rohmbus img {
+     height: 120%;
+     width: 160%;
+     position: absolute;
+     top: 24px;
+     left: -120px;
+     max-width: 750px;
+     transform: rotate(-45deg);
+     opacity: 0;
+     animation: car 1s ease forwards;
+     animation-delay: 2s;
+
+ }
+
+ @keyframes car {
+
+     0% {
+         transform: translate(300px, -300px) scale(0) rotate(-45deg);
+         opacity: 0;
+
+     }
+
+     100% {
+         transform: translate(0, 0) scale(1) rotate(-45deg);
+         opacity: 1;
+     }
+ }
+
+ .home .rohmbus2 {
+     position: absolute;
+     height: 600px;
+     width: 600px;
+     background-color: #1743e3;
+     transform: rotate(45deg);
+     top: -25px;
+     right: -25px;
+     z-index: -1;
+     bottom: 5px;
+     opacity: 0;
+     animation: rh2 1s ease forwards;
+     animation-delay: 1.6s;
+
+
+ }
+
+ @keyframes rh2 {
+     0% {
+         right: -40px;
+         opacity: 0;
+
+     }
+
+     100% {
+         right: -25px;
+         opacity: 1;
+     }
+ }
